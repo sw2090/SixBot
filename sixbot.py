@@ -19,12 +19,16 @@ def load_indexes():
     index = load_index_from_storage(storage_context)
     return index
 
+    
+
 
 def main():
+
 
 # api key
     ### Please add your own key here:
     ### os.environ['OPENAI_API_KEY'] = "add key here"
+
 
 # load indices
     index = load_indexes()
