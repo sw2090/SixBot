@@ -5,7 +5,6 @@ import os
 
 import config
 
-os.environ['OPENAI_API_KEY'] = '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'
 
 
 
@@ -24,7 +23,8 @@ def load_indexes():
 def main():
 
 # api key
-    os.environ['OPENAI_API_KEY'] = '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'
+    ### Please add your own key here:
+    ### os.environ['OPENAI_API_KEY'] = "add key here"
 
 # load indices
     index = load_indexes()
