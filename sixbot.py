@@ -37,7 +37,7 @@ def main():
 # query the selected index
     query = st.text_input('Enter Your Query')
     query_engine = index.as_query_engine()
-    button = st.button(f'Response')
+    button = st.button(f'Respond')
     if button:
         st.write(query_engine.query(query))
 
