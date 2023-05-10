@@ -16,7 +16,7 @@ def load_indexes():
     storage_context = StorageContext.from_defaults(persist_dir="./storage")
 
     # load index
-    index = load_index_from_storage(storage_context)
+    index = load_indices_from_storage(storage_context)
     return index
 
     
