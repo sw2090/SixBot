@@ -2,10 +2,10 @@ import streamlit as st
 from llama_index import GPTVectorStoreIndex
 from llama_index import StorageContext, load_index_from_storage
 import os
-
+import openai
 import config
 
-
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
 @st.cache_resource
@@ -35,13 +35,13 @@ def main():
 
     st.header('Six BOT v 1.2')
 
-    st.write("Ask me about Sixiang Wang's research on Korean and East Asian history")
+    st.write("A bot about Sixiang Wang's research on Korean and East Asian history")
     data = index
 
 # query the selected index
-    query = st.text_input('Enter Your Query')
+    query = st.text_input('What are your questions?')
     query_engine = index.as_query_engine()
-    button = st.button(f'Respond')
+    button = st.button(f'See my answers')
     if button:
         st.write(query_engine.query(query))
 
