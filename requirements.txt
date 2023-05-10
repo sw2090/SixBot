@@ -1,1 +1,1 @@
-pip install llama-index
+llama-index
